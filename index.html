@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
+
 <body>
     <p id="name"></p>
     <p id="city"></p>
     <p id="phone"></p>
     <p id="birth"></p>
     <p id="anHien" style="display: none;">
-    Hello. How are you</p>
+        Hello. How are you</p>
     <button id="hien">Hiện</button>
+
     <script>
-        var theP1 = document.getElementById("name");
-        var theP2 = document.getElementById("city");
-        var theP3 = document.getElementById("phone");
-        var theP4 = document.getElementById("birth");
-        var theP5 = document.getElementById("anHien");
+        let theP1 = document.getElementById("name");
+        let theP2 = document.getElementById("city");
+        let theP3 = document.getElementById("phone");
+        let theP4 = document.getElementById("birth");
+        let theP5 = document.getElementById("anHien");
 
         alert("Chào mừng bạn đến với ứng dụng JavaScript đầu tiên");
 
-        var ten = prompt("Nhập tên của bạn: ");
-        var thanhpho = prompt("Nhập tên thành phố bạn đang sống: ");
-        var sodienthoai = prompt("Nhập số điện thoại của bạn: ");
-
-        theP1.innerHTML = ten;
-        theP2.innerHTML = thanhpho;
-        theP3.innerHTML = sodienthoai;
-
-        var yeuCauNhap = true;
+        let ten=prompt("Nhập tên của bạn: ");
+        let thanhpho=prompt("Nhập tên thành phố bạn đang sống: ");
+        let sodienthoai=prompt("Nhập số điện thoại của bạn: ");
+        
+        theP1.innerHTML=ten;
+        theP2.innerHTML=thanhpho;
+        theP3.innerHTML=sodienthoai;
+       
+       let yeuCauNhap = true;
         while(yeuCauNhap) {
-            var namSinh = prompt("Nhập năm sinh của bạn: ");
-            var now = new Date().getFullYear();
+            let namSinh = prompt("Nhập năm sinh của bạn: ");
+            let now = new Date().getFullYear();
             if(namSinh > now) {
                 alert("Bạn đừng có xạo, năm nay là năm " + now);
             } else {
@@ -42,14 +46,12 @@
                 yeuCauNhap = false;
             }
         }
-
         document.getElementById("hien").onclick = hienAn;
         function hienAn() {
             theP5.style = "display:block;"
         }
 
-
-   </script>
-    
+    </script>
 </body>
+
 </html>
